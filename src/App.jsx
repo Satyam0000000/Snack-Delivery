@@ -4,7 +4,7 @@ import { account } from "./appwrite"; // Appwrite configuration
 import LandingPage from "./Pages/LandingPage"; // Landing page
 import Auth from "./Auth"; // Login/Signup component
 import HomePage from "./Pages/HomePage"; // HomePage component
-
+import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   const [user, setUser] = useState(null);
 
