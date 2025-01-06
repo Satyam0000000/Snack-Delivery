@@ -45,7 +45,7 @@ const App = () => {
           />
           <Route
             path="/home"
-            element={user ? <HomePage user={user} onLogout={handleLogout} /> : <Navigate to="/auth" />}
+            element={<HomePage/>}
           />
         </Routes>
       </div>

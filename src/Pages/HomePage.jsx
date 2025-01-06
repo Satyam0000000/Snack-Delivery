@@ -12,7 +12,7 @@ const HomePage = ({ user, onLogout }) => {
 
   const handleOrder = async ({ name, quantity, mobileNumber }) => {
   const payload = {
-    userEmail: user.email, // Pass the user's email
+    // userEmail: user.email, // Pass the user's email
     itemName: name,
     quantity,
     phoneNumber: mobileNumber,

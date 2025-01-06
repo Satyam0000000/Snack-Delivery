@@ -33,20 +33,21 @@ const Header = ({ user, onLogout }) => {
           {user ? (
             <>
               <span className="text-lg">Hello, {user.name || user.email}</span>
-              <button
+              {/* <button
                 onClick={handleLogout}
                 className="bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600"
               >
                 Logout
-              </button>
+              </button> */}
             </>
           ) : (
-            <button
-              onClick={handleLoginClick}
-              className="bg-white text-black px-4 py-2 rounded hover:bg-red-500 hover:text-white"
-            >
-              Login
-            </button>
+            console.log()
+            // <button
+            //   onClick={handleLoginClick}
+            //   className="bg-white text-black px-4 py-2 rounded hover:bg-red-500 hover:text-white"
+            // >
+            //   Login
+            // </button>
           )}
         </div>
       </div>

@@ -7,7 +7,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/auth"); // Navigate to the Auth component
+    navigate("/home"); // Navigate to the Auth component
   };
 
   return (
