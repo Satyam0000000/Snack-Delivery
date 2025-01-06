@@ -7,6 +7,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
+// CORS configuration to allow specific origins (localhost and Vercel)
+const corsOptions = {
+  origin: ["http://localhost:3000", "https://your-vercel-deployment-url.vercel.app"], // Update with your Vercel URL
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+
+// Enable CORS with the defined options
+app.use(cors(corsOptions));
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Built-in JSON parsing in Express
 
