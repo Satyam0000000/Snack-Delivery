@@ -32,7 +32,7 @@ oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 // Route for sending emails
 app.post('/send-email', async (req, res) => {
   try {
-    const { userEmail, itemName, quantity, phoneNumber } = req.body;
+    const {  itemName, quantity, phoneNumber } = req.body;
 
     // Get an access token using the refresh token
     const accessToken = await oauth2Client.getAccessToken();
@@ -42,7 +42,7 @@ app.post('/send-email', async (req, res) => {
         service: 'gmail',
         auth: {
           type: 'OAuth2',
-          user: process.env.EMAIL_USER,
+          // user: process.env.EMAIL_USER,
           clientId: process.env.CLIENT_ID,
           clientSecret: process.env.CLIENT_SECRET,
           refreshToken: process.env.REFRESH_TOKEN,
@@ -60,7 +60,7 @@ app.post('/send-email', async (req, res) => {
       text: `
         You have received a new order:
         -----------------------------------
-        Customer Email: ${userEmail}
+        Customer Email: NAN
         Item: ${itemName}
         Quantity: ${quantity}
         Customer Phone: ${phoneNumber}

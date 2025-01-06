@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header"; // Import Header component
 import Item from "../components/Item"; // Import Item component
 
-const HomePage = ({ user, onLogout }) => {
+const HomePage = ({  }) => {
   const snacks = [
     { id: 1, name: "Chips", image: "https://t4.ftcdn.net/jpg/05/88/75/69/240_F_588756932_5ZQBUg6KLT3kFAkR4EkRNuAaPCnDVQAS.jpg" },
     { id: 2, name: "Maggie", image: "https://t4.ftcdn.net/jpg/07/67/86/55/240_F_767865595_uL1KNe8ojMVewEc8oxzMXfW9TGz5oHJB.jpg" },
@@ -41,7 +41,8 @@ const HomePage = ({ user, onLogout }) => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <Header user={user} onLogout={onLogout} />
+      {/* <Header user={user} onLogout={onLogout} /> */}
+      <Header/>
 
       {/* Main Content */}
       <div className="p-4">
