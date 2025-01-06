@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 // CORS configuration to allow specific origins (localhost and Vercel)
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://your-vercel-deployment-url.vercel.app"], // Update with your Vercel URL
+  origin: ["http://localhost:3000", "https://snack-delivery-git-main-satyams-projects-6ec6fb28.vercel.app/"], // Update with your Vercel URL
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 };
