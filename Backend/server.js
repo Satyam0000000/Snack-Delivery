@@ -30,7 +30,7 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
 // Route for sending emails
-app.post('/send-email', async (req, res) => {
+app.post('/api/send-email', async (req, res) => {
   try {
     const {  itemName, quantity, phoneNumber } = req.body;
 
