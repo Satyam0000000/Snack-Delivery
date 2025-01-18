@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 // CORS configuration to allow specific origins (localhost and Vercel)
 const corsOptions = {
-  origin: ["https://snack-delivery-mu.vercel.app/"], // Update with your Vercel URL
+  origin: ["https://snack-delivery-mu.vercel.app"], // Update with your Vercel URL
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 };
