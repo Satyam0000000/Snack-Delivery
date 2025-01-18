@@ -19,7 +19,7 @@ const HomePage = ({  }) => {
   };
 
   try {
-    const response = await fetch('https://snack-delivery-fxoa.vercel.app', {
+    const response = await fetch('https://snack-delivery-fxoa.vercel.app/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
