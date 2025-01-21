@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header"; // Import Header component
 import Item from "../components/Item"; // Import Item component
 
-const HomePage = ({  }) => {
+const HomePage = ({ }) => {
   const snacks = [
     { id: 1, name: "Chips", image: "https://t4.ftcdn.net/jpg/05/88/75/69/240_F_588756932_5ZQBUg6KLT3kFAkR4EkRNuAaPCnDVQAS.jpg" },
     { id: 2, name: "Maggie", image: "https://t4.ftcdn.net/jpg/07/67/86/55/240_F_767865595_uL1KNe8ojMVewEc8oxzMXfW9TGz5oHJB.jpg" },
@@ -11,19 +11,20 @@ const HomePage = ({  }) => {
   ];
 
   const handleOrder = async ({ name, quantity, mobileNumber }) => {
-  const payload = {
-    // userEmail: user.email, // Pass the user's email
-    itemName: name,
-    quantity,
-    phoneNumber: mobileNumber,
-  };
+    const payload = {
+      itemName: name,
+      quantity,
+      phoneNumber: mobileNumber,
+    };
 
-  try {
-    const response = await fetch('https://snack-delivery-fxoa.vercel.app/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
+    try {
+      const response = await fetch('https://snack-delivery-fxoa.vercel.app/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
 
       const result = await response.json();
 
@@ -41,8 +42,7 @@ const HomePage = ({  }) => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      {/* <Header user={user} onLogout={onLogout} /> */}
-      <Header/>
+      <Header />
 
       {/* Main Content */}
       <div className="p-4">
